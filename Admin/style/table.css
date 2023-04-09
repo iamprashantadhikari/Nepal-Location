@@ -1,0 +1,95 @@
+.nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.create{
+    display: flex;
+    justify-content: end;
+    margin: 3px 0px;
+    margin-right: 35px;  
+}
+.create button{
+    padding: 4px 10px;
+    background: rgb(51, 51, 243);
+    border: 1px solid white;
+    border-radius: 6px;
+    color: white;
+}
+.create button i{
+   margin-right: 1px;
+}
+.searchBar{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    gap: 3px;
+}
+.searchBar button{
+    border: 1px solid #DDD;
+    border-radius: 6px;
+}
+.searchBar button:hover{
+    background-color: greenyellow;
+}
+
+/* table{
+    width: 100%;
+}
+th {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7.4em;
+    background: rgb(54, 32, 255);
+    color: #FFF;
+    padding: 2px 6px;
+    border-collapse: separate;
+    border: 1px solid #000;
+    padding: 4px;
+}
+
+td {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7.3em;
+    border: 1px solid #DDD;
+    padding: 9px;
+} */
+
+.edit {
+    background-color: rgb(157, 241, 241);
+    border: 1px solid #DDD;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete {
+    background-color: red;
+    color: white;
+    border: 1px solid #DDD;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.active button{
+background-color: rgb(42, 248, 70);
+border: 1px solid #ddd;
+border-radius: 6px;
+cursor: pointer;
+}
+.inactive button{
+background-color: orangered;
+border: 1px solid #ddd;
+color: rgb(219, 219, 219);
+border-radius: 6px;
+cursor: pointer;
+}
+
+.data-empty{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* index page */

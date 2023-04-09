@@ -1,0 +1,118 @@
+.form{
+    background-color: #ddd;
+    padding: 45px;
+    border-radius: 12px;
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+}
+#name{
+    padding: 2px 15px;
+    font-size: 20px;
+}
+.textstyle{
+    padding: 8px;
+    margin: 12px;
+    width: 40vw;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit{
+    width: 45vh;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 5px 25px;
+    margin: 15px 5px 3px;
+    cursor: pointer;
+    color: white;
+    margin-left: 6%;
+}
+.submit:hover{
+    background-color: #45a049;
+}   
+
+/* ----- For Select tag ----- */
+.select{
+    padding: 2px;
+    margin: 3px;
+}
+.label{
+    padding: 7px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+
+/*------------- For login Register --------------*/
+
+.login-heading{
+    color: #45a049;
+    display: flex;
+    justify-content: center;
+    font-family: 'Baloo 2', cursive;
+    text-shadow: 2px 2px #ccf1ce;
+}
+.login-form{
+    background-color: #ddd;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;     
+    justify-content: center;
+}
+.form-reg{
+    background-color: #ddd;
+    padding: 5px;
+    border-radius: 12px;
+    margin-top: 2%;
+    display: flex;         
+    justify-content: center;
+}
+.form-reg h3{
+    display: flex;
+    justify-content: center;
+    color: #686767;
+}
+.text-style{
+    /* height: 19px; */
+    width: 40vh;
+    margin: 13px 0px 8px 0px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.text-style-reg{
+    width: 40vh;
+    margin: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#register-btn{
+    width: 30vh;
+    background-color: #31bcfc;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 5px 25px;
+    cursor: pointer;
+    color: white;
+}
+#register-btn:hover{
+    background-color: #03567c;
+}
+#login-btn{
+    width: 27vh;
+    background-color: #31bcfc;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 10px 25px;
+    /* margin: 15px 5px 3px; */
+    cursor: pointer;
+    color: white;
+    margin-left: 20%;
+}
+#login-btn:hover{
+    background-color: #03567c;
+}

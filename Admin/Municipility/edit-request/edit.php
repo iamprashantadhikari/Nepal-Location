@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../../style/form.css">
 </head>
 <body>
+<div class="main-div">
+    <div><?php include "../../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
 <?php
 include "../../include/header.php";
 $id = $_GET['id'];
@@ -26,6 +29,8 @@ $row = mysqli_fetch_array($result);
         <input type="number" name="area" class="textstyle mt-0" placeholder="Enter Area" value="<?php echo $row['municipility_area']; ?>"> <br>
         <button type="submit" class="submit">submit</button>
     </form>
+</div>
+</div>
 </div>
 </body>
 </html>

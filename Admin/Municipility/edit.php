@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../style/form.css">
 </head>
 <body>
+<div class="main-div">
+    <div><?php include "../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
 <?php
 require_once "../connection.php";
 
@@ -29,5 +32,7 @@ $row = mysqli_fetch_array($result);
         <button type="submit" class="submit">submit</button>
     </form>
     </div>
+    </div>
+</div>
 </body>
 </html>

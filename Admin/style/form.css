@@ -17,6 +17,13 @@
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+.textWard{
+    padding: 8px;
+    margin: 12px;
+    width: 20vw;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
 .submit{
     width: 45vh;
@@ -27,7 +34,7 @@
     margin: 15px 5px 3px;
     cursor: pointer;
     color: white;
-    margin-left: 6%;
+    /* margin-left: 4%; */
 }
 .submit:hover{
     background-color: #45a049;

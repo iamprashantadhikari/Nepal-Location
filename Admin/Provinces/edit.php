@@ -17,9 +17,12 @@ $row = mysqli_fetch_array($result);
 
 ?>
 
-<?php include "../include/header.php" ?>
+<div class="main-div">
+    <div><?php include "../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
+    <?php include "../include/header.php" ?>
     
-<div class="form">
+    <div class="form">
     <form action="update_province.php?id=<?php echo $row['id']; ?>" method="POST" >
         <label for="" id="name">Enter Province Name You Want to Edit</label> <br>
         <input type="text" name="province" class="textstyle" placeholder="Enter Province Name" value="<?php echo $row['province']; ?>"><br>
@@ -28,5 +31,7 @@ $row = mysqli_fetch_array($result);
         <button type="submit" class="submit">submit</button>
     </form>
     </div>
+    </div>
+</div>
 </body>
 </html>

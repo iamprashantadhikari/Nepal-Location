@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="../style/form.css">
 </head>
 <body>
-
+<div class="main-div">
+    <div><?php include "../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
 <?php include "../include/header.php" ?>
 
 <div class="form">
@@ -22,8 +24,12 @@
         <input type="radio" name="status" id="" value="active">
         <label for="">Inacive</label>
         <input type="radio" name="status" id="" value="inactive"> <br>
+        <div class="d-flex justify-content-center">
         <button type="submit" class="submit">submit</button>
+        </div>
     </form>
     </div>
+    </div>
+</div>
 </body>
 </html>

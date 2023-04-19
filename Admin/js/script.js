@@ -31,3 +31,25 @@ var loadFile = function(event) {
 $(document).ready(function() {
     $('.js-example-basic-single').select2();
 });
+
+
+// sidebar
+(function(){
+    $('#msbo').on('click', function(){
+      $('body').toggleClass('msb-x');
+    });
+  }());
+
+function open_sidebar(){
+
+}
+$(document).ready(function(){
+    $('#bar_opener').on('click',function(){
+        $('#msb').toggleClass('msbActive');
+        $('#child-div').toggleClass('child-div');
+        $('#child-div-prov').toggleClass('child-div');
+        $('#listItem').toggleClass('listitem-secondary');
+    });
+    
+});
+

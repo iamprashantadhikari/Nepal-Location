@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="../style/form.css">
 </head>
 <body>
+<div class="main-div">
+    <div><?php include "../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
     <?php
-        require_once "../connection.php";
         include "../include/header.php";
         $id = $_SESSION['userid'];
         $sql = "SELECT * FROM users WHERE id='$id'";
@@ -62,6 +64,8 @@
             <button type="submit" id="register-btn">Update</button>
         </div>
     </form>
+</div>
+</div>
 </div>
 </body>
 </html>

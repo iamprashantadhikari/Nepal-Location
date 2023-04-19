@@ -8,17 +8,20 @@
     <link rel="stylesheet" href="../style/form.css">
 </head>
 <body>
+<div class="main-div">
+    <div><?php include "../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
     <?php
-require_once "../connection.php";
+    require_once "../connection.php";
 
-$id = $_GET['id'];
+    $id = $_GET['id'];
 
-$sql = "SELECT * FROM district WHERE id=$id";
-$result = mysqli_query($conn,$sql);
-$row = mysqli_fetch_array($result);
+    $sql = "SELECT * FROM district WHERE id=$id";
+    $result = mysqli_query($conn,$sql);
+    $row = mysqli_fetch_array($result);
     ?>
 
-<?php include "../include/header.php" ?>
+    <?php include "../include/header.php" ?>
 
     <div class="form">
     <form action="update_district.php?id=<?php echo $row['id']; ?>" method="POST">
@@ -29,5 +32,7 @@ $row = mysqli_fetch_array($result);
         <button type="submit" class="submit">submit</button>
     </form>
     </div>
+    </div>
+</div>
 </body>
 </html>

@@ -1,5 +1,4 @@
 <?php
-include "../include/header.php";
 $id = $_GET['id'];
 ?>
 
@@ -13,6 +12,10 @@ $id = $_GET['id'];
     <link rel="stylesheet" href="../style/form.css">
 </head>
 <body>
+<div class="main-div">
+    <div><?php include "../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
+    <?php include "../include/header.php" ?>
     <div class="form-reg">
             <form action="updatePw.php?id=<?php echo $id ?>" method="POST">
                     <h3>Change Password</h3>
@@ -26,6 +29,8 @@ $id = $_GET['id'];
                 </div>
             </form>
     </div>
+    </div>
+</div>
 </body>
 </html>
 <?php

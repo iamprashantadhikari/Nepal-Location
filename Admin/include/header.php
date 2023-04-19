@@ -42,6 +42,10 @@ $sqlZoneMuni = "SELECT * FROM zone_municipility";
 $resultZoneMuni = mysqli_query($conn,$sqlZoneMuni);
 $numZoneMuni = mysqli_num_rows($resultZoneMuni);
 
+$sqlMuniWard = "SELECT * FROM municipility_ward";
+$resultMuniWard = mysqli_query($conn,$sqlMuniWard);
+$numMuniWard = mysqli_num_rows($resultMuniWard);
+
 $id = $_SESSION['userid'];
 $sqlUser = "SELECT * FROM users WHERE id=$id";
 $resultUser = mysqli_query($conn,$sqlUser);
@@ -67,20 +71,15 @@ $rowUser = mysqli_fetch_array($resultUser);
 <body class="d-flex flex-column min-vh-100">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">NCT</a>
+  <button id='bar_opener'>&#9776;</button>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="http://localhost/nepalLocation/admin/index.php">Dashboard <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="http://localhost/nepalLocation/admin/users/index.php">Users</a>
-      </li>
-      <li class="nav-item dropdown listItem">
+      
+      <li class="nav-item dropdown listItem listitem-secondary" id="listItem">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <span><img src="http://localhost/nepalLocation/admin/uploaded_images/<?php echo $rowUser['image'] ?>" alt="" class="border rounded-circle" height="28px" width="30px"></span> <?php echo $_SESSION['username']?>
         </a>
@@ -96,7 +95,9 @@ $rowUser = mysqli_fetch_array($resultUser);
   </div>
 </nav>
 
-    <div class="container1">
+
+
+    <!-- <div class="container1">
         <a href="http://localhost/nepalLocation/admin/Provinces/index.php"><button>Provinces <span class="counter"> <?php echo $numProv ?> </span></button></a>
         <a href="http://localhost/nepalLocation/admin/Zones/index.php"><button>Zone <span class="counter"> <?php echo $numZone ?> </span> </button></a>
         <a href="http://localhost/nepalLocation/admin/Districts/index.php"><button>District <span class="counter"> <?php echo $numDist ?></span> </button></a>
@@ -105,7 +106,8 @@ $rowUser = mysqli_fetch_array($resultUser);
         <a href="http://localhost/nepalLocation/admin/Municipility/index.php"><button>Municipility <span class="counter"> <?php echo $numMuni ?></span> </button></a>
         <a href="http://localhost/nepalLocation/admin/province_municipility/index.php"><button>Province-Municipility <span class="counter"> <?php echo $numProvMuni ?></span> </button></a>
         <a href="http://localhost/nepalLocation/admin/Zone_municipility/index.php"><button>Zone-Municipility <span class="counter"> <?php echo $numZoneMuni ?></span> </button></a>
-    </div>
+        <a href="http://localhost/nepalLocation/admin/municipility_ward/index.php"><button>Municipility Ward <span class="counter"> <?php echo $numMuniWard ?></span> </button></a>
+    </div> -->
 
     <script defer src="../bootstrap-5.3.0-alpha2-dist/js/bootstrap.min.js"></script>
     <script defer src="http://localhost/nepalLocation/admin/bootstrap-5.3.0-alpha2-dist/js/jquery-3.5.js"></script>

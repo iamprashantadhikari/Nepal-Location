@@ -7,6 +7,9 @@
     <title>Nepal Location | View Request</title>
 </head>
 <body>
+<div class="main-div">
+    <div><?php include "../../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
     <?php
     include "../../include/header.php";
     $id = $_GET['id'];
@@ -55,5 +58,7 @@
             </tbody>
         </table>
     </div>
+    </div>
+</div>
 </body>
 </html>

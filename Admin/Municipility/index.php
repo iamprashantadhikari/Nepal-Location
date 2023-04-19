@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
+<div class="main-div">
+    <div><?php include "../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
     <?php
-    require_once "../connection.php";
     include "../include/header.php";
     if($_SESSION['role']=="admin"){
         $sql = "SELECT * FROM municipility";
@@ -102,6 +104,8 @@
             <?php } ?>
         <tbody>
     </table>
+</div>
+</div>
 </div>
     <div class="data-empty">
         <?php if($num==0) echo "Data not available" ?>

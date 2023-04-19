@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nepal Loaction | Users</title>
     <link rel="stylesheet" href="../style/table.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
-    <?php include "../include/header.php" ?>
+<div class="main-div">
+    <div><?php include "../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
     <?php
-    require_once "../connection.php";
+    include "../include/header.php";
     $you = $_SESSION['userid'];
     $sql = "SELECT * FROM users WHERE NOT (id=$you)";
     $result = mysqli_query($conn,$sql);
@@ -71,5 +72,7 @@
         <?php }?>
     <tbody>
 </table>
+</div>
+</div>
 </div>
 <?php include "../include/footer.php" ?>

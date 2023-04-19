@@ -1,0 +1,88 @@
+.main-home-page{
+    position: relative;
+    z-index: -1;
+    height: 84%;
+    /* min-height: 500px; */
+}
+.background{
+    padding: 4rem 7rem;
+    /* height: 65vh; */
+    background: no-repeat center center/cover;
+    position: relative;
+}
+
+
+.background::before{
+    content: "";
+    display: block;
+    background: url("../Assets/background.jpg") no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    /* background-attachment: fixed; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* opacity: 0.89; */
+    z-index: -1;
+}
+
+.background h1{
+    font-size: 50px;
+    width: 35rem;
+    display: flex;
+    justify-content: center;
+}
+.background p{
+    font-size: 20px;
+    width: 40rem;
+    display: flex;
+    justify-content: center;
+}
+
+.dataTables_wrapper{
+    position: static !important;
+}
+
+.blog-card-desc{
+    height: 75px;
+    overflow-y: hidden;
+}
+
+.image{
+    height: 500px;
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+    background-image: url(../Assets/no-img-found.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  
+}
+.img-blog-desc{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.footer-map{
+    width: 100%;
+    height: 300px;
+}
+
+@media all and (max-width:1200px){
+    .background h1{
+        width: auto;
+    }
+    .background p{
+        width: auto;
+    }
+
+}
+@media all and (max-width:576px){
+    .background{
+        padding: 0.8rem;
+    }
+    .main-home-page{
+        padding-top: 50px;
+    }
+}

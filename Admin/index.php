@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Baloo+Thambi+2:wght@500&" rel="stylesheet">
 </head>
 <body>
+<div class="main-div">
+    <div><?php include "include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
     <?php include "include/header.php";
     $pSql = "SELECT * FROM province WHERE status='active'";
     $pResult = mysqli_query($conn,$pSql);
@@ -77,6 +80,8 @@
             </table>
         </div>
     </div>  
+    </div>
+</div>
 </body>
 </html>
 <?php include "include/footer.php" ?>

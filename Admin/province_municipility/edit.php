@@ -23,6 +23,9 @@ $sql_muni = "SELECT * FROM municipility";
 $result_muni = mysqli_query($conn,$sql_muni);
     ?>
 
+<div class="main-div">
+    <div><?php include "../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
 <?php include "../include/header.php" ?>
     
     <div class="form">
@@ -73,5 +76,7 @@ $result_muni = mysqli_query($conn,$sql_muni);
             <button type="submit" class="submit">submit</button>
         </form>
     </div>
+    </div>
+</div>
 </body>
 </html>

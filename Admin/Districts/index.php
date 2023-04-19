@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
+<div class="main-div">
+    <div><?php include "../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
     <?php
      include "../include/header.php";
-    require_once "../connection.php";
     if($_SESSION['role']=="admin"){
         $sql = "SELECT * FROM district";
     }else{
@@ -102,6 +104,8 @@
             <?php } ?>
         </tbody>
     </table>
+</div>
+</div>
 </div>
 
     <div class="data-empty">

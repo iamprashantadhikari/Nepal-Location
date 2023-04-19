@@ -8,6 +8,9 @@
     <title>Nepal Location | Change Password</title>
 </head>
 <body>
+<div class="main-div">
+    <div><?php include "../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
     <?php include "../include/header.php" ?>
 
     <div class="form-reg">
@@ -26,6 +29,8 @@
             </div>
         </form>
     </div>
+    </div>
+</div>
 </body>
 </html>
 <?php

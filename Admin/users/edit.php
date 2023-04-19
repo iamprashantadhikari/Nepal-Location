@@ -1,5 +1,3 @@
-<?php include "../include/header.php"; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +8,11 @@
     <link rel="stylesheet" href="../style/form.css">
 </head>
 <body>
+<div class="main-div">
+    <div><?php include "../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
     <?php
-    require_once "../connection.php";
+    include "../include/header.php";
     $id = $_GET['id'];
     $sql = "SELECT * FROM users WHERE id='$id'";
     $result = mysqli_query($conn,$sql);
@@ -72,6 +73,8 @@
                 </div>
         </form>
     </div>
+    </div>
+</div>
 </body>
 </html>
 <?php 

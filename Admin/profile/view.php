@@ -7,9 +7,11 @@
     <title>Nepal Location | View Profile</title>
 </head>
 <body>
+<div class="main-div">
+    <div><?php include "../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
     <?php
         include "../include/header.php";
-        require_once "../connection.php";
 
         $user = $_SESSION['userid'];
         $sql = "SELECT * FROM users WHERE id=$user";
@@ -53,6 +55,8 @@
             </tr>
         </table>
     </div>
+    </div>
+</div>
 </body>
 </html>
 <?php include "../include/footer.php" ?>

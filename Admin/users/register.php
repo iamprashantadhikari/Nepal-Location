@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="../style/form.css">
 </head>
 <body>
+<div class="main-div">
+    <div><?php include "../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
     <?php include "../include/header.php"; ?>
     <div class="form-reg">
         <form action="register_action.php" method="POST" enctype="multipart/form-data">
@@ -82,6 +85,8 @@
             </div>
         </form>
     </div>
+    </div>
+</div>
 </body>
 </html>
 

@@ -18,9 +18,12 @@ $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_array($result);
 ?>
 
+<div class="main-div">
+    <div><?php include "../include/sidebar.php" ?></div>
+    <div id="child-div" class="child-div child-div-full">
 <?php include "../include/header.php" ?>
     
-<div class="form">
+    <div class="form">
     <form action="update_zone.php?id=<?php echo $row['id']; ?>" method="POST">
         <label for="" id="name">Enter Zone Name You Want to Add</label> <br>
         <input type="text" name="zone" class="textstyle" placeholder="Enter Zone Name" value="<?php echo $row['zone'] ?>"><br>
@@ -29,5 +32,7 @@ $row = mysqli_fetch_array($result);
         <button type="submit" class="submit">submit</button>
     </form>
     </div>
+    </div>
+</div>
 </body>
 </html>

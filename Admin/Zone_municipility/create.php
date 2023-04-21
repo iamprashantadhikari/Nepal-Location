@@ -23,12 +23,20 @@
     <div id="child-div" class="child-div child-div-full">
 <?php include "../include/header.php" ?>
     
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="javascript:history.back()">Zone Municipility</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Create</li>
+    </ol>
+    </nav>
+
     <div class="form">
         <form action="action_zone_municipility.php" method="POST">
 
-            <label for="" class="label">Select Zone:</label>
+            <label for="" id="name">Select Zone:</label> <br>
 
-            <select name="zone_name" class="js-example-basic-single">
+            <select name="zone_name" class="js-example-basic-single form-select">
 
                 <?php if(mysqli_num_rows($result_zone)>0){ ?>
                     <?php while($row_zone=mysqli_fetch_array($result_zone)){ ?>
@@ -46,8 +54,8 @@
                 <?php }?>
             </select> <br><br>
 
-            <label for="" class="label">Select District:</label>
-            <select name="district_name" class="js-example-basic-single">
+            <label for="" class="label">Select District:</label> <br>
+            <select name="district_name" class="js-example-basic-single form-select">
                 <?php if(mysqli_num_rows($result_dist)>0){ ?>
                     <?php while($row_dist=mysqli_fetch_array($result_dist)){ ?>
                         <?php if($row_dist['status']=="active"){ ?>
@@ -64,8 +72,8 @@
                 <?php }?>
             </select> <br><br>
             
-            <label for="" class="label">Select Municipility:</label>
-            <select name="municipility_name" class="js-example-basic-single">
+            <label for="" id="name">Select Municipility:</label> <br>
+            <select name="municipility_name" class="js-example-basic-single form-select">
                 <?php if(mysqli_num_rows($result_muni)>0){ ?>
                     <?php while($row_muni=mysqli_fetch_array($result_muni)){ ?>
                         <?php if($row_muni['status']=="active"){ ?>
@@ -78,7 +86,7 @@
             </select> <br><br>
 
             <span id="name">Status:</span>
-            <label for="" class="label">Active</label>
+            <label for="" id="name">Active</label>
             <input type="radio" name="status" id="" value="active">
             <label for="">Inactive</label>
             <input type="radio" name="status" id="" value="inactive">

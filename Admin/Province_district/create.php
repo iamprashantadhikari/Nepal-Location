@@ -17,6 +17,14 @@ $sql_district = "SELECT * FROM district";
 $result_district = mysqli_query($conn,$sql_district);
 ?>
 
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="javascript:history.back()">Province District</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Create</li>
+    </ol>
+    </nav>
+
 <div class="main-div">
     <div><?php include "../include/sidebar.php" ?></div>
     <div id="child-div" class="child-div child-div-full">
@@ -25,9 +33,9 @@ $result_district = mysqli_query($conn,$sql_district);
     <div class="form">
     <form action="action_province_district.php" method="POST">
 
-       <label for="" class="label">Select Province:</label>
+       <label for="" id="name">Select Province:</label> <br>
 
-       <select name="province_name" class="js-example-basic-single" ?>" >
+       <select name="province_name" class="js-example-basic-single form-select" ?>" >
 
        <?php if(mysqli_num_rows($result_province)>0){ ?>
         <?php while($row_province = mysqli_fetch_array($result_province)){ ?>
@@ -40,8 +48,8 @@ $result_district = mysqli_query($conn,$sql_district);
         <?php } ?>
     </select> <br> <br>
 
-    <label for="" class="label">Select District:</label>
-    <select name="district_name" class="js-example-basic-single" ?>">
+    <label for="" id="name">Select District:</label> <br>
+    <select name="district_name" class="js-example-basic-single form-select" ?>">
 
         <?php if(mysqli_num_rows($result_district)>0){ ?>
             <?php while($row_district = mysqli_fetch_array($result_district)){ ?>

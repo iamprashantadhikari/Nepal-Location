@@ -18,6 +18,14 @@
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result);
     ?>
+
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Profile</li>
+    </ol>
+    </nav>
+
     <div class="container py-2">
         <img class="rounded-circle img-fluid ml-5" style="width: 110px; height:110px;" src="../uploaded_images/<?php echo $row['image'] ?>" alt="img">
         <span class="float-right pt-3">
@@ -57,6 +65,4 @@
     </div>
     </div>
 </div>
-</body>
-</html>
 <?php include "../include/footer.php" ?>

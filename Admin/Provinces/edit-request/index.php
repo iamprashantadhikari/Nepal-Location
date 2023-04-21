@@ -18,6 +18,14 @@
     $serialNo = 1;
      ?>
 
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="javascript:history.back()">Province</a></li>
+        <li class="breadcrumb-item active" aria-current="page">View Request</li>
+    </ol>
+    </nav>
+
     <div class="container-fluid mt-2">
         <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead class="bg-primary text-light">

@@ -24,6 +24,12 @@
     $serialNo = 1;
     ?>
 
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">District</li>
+    </ol>
+    </nav>
 <div class="nav">
     <a href="create.php" class="create"> <button><i class="fa-solid fa-circle-plus"></i>Create</button></a>
 </div>

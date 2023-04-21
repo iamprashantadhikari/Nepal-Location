@@ -4,6 +4,10 @@ $id = $_GET['id'];
 $sql = "SELECT district_id FROM province_district WHERE province_id='$id' AND status='active'";
 $result = mysqli_query($conn,$sql);
 
+$sqlProv = "SELECT * FROM province WHERE id='$id'";
+$resultProv = mysqli_query($conn,$sqlProv);
+$rowProv = mysqli_fetch_array($resultProv);
+
 $serialNo = 1;
 ?>
 <!DOCTYPE html>
@@ -13,25 +17,27 @@ $serialNo = 1;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nepal Location | Districts</title>
-    <link rel="stylesheet" href="../admin/bootstrap-5.3.0-alpha2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="http://localhost/nepalLocation/admin/bootstrap-5.3.0-alpha2-dist/css/dataTables.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
 </head>
 <body>
-  <div class="container mt-3">
+  <?php include "../include/header.php" ?>
+
+  <div class="container table-size">
     <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item h4"><a href="../index.php">Home</a></li>
-        <li class="breadcrumb-item active h4" aria-current="page">Districts</li>
-      </ol>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item h5"><a href="../index.php">Home</a></li>
+      <li class="breadcrumb-item h5 active" aria-current="page"><?php echo $rowProv['province'];?></li>
+      <li class="breadcrumb-item h5 active" aria-current="page">District</li>
+    </ol>
     </nav>
   </div>
+
     <div class="container">
         <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <th>S.N</th>
                 <th>District</th>
+                <th>Total Municipility</th>
                 <th>Area</th>
             </thead>
             <tbody>
@@ -45,7 +51,12 @@ $serialNo = 1;
                 <?php while($rowDist=mysqli_fetch_array($resultDist)){ ?>
                   <tr>
                     <td><?php echo $serialNo; ?></td>
-                    <td><a href="../District/index.php?id=<?php echo $rowDist['id'] ?>"><?php echo $rowDist['district'] ?> </a></td>
+                    <td><?php echo $rowDist['district'] ?></td>
+                    <?php
+                    $muniCountSql = "SELECT * FROM province_municipility WHERE district_id='$row[district_id]' AND status='active'";
+                    $muniCountResult = mysqli_query($conn,$muniCountSql);
+                    ?>
+                    <td><a href="../District/index.php?id=<?php echo $rowDist['id']?>&pId=<?php echo $id?>"><?php echo mysqli_num_rows($muniCountResult);?></a></td>
                     <td><?php echo $rowDist['area'] ?></td>
                   </tr>
                 <?php $serialNo = $serialNo+1; ?>
@@ -54,11 +65,12 @@ $serialNo = 1;
         </table>
     </div>
 
-    <script src="admin/bootstrap-5.3.0-alpha2-dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer src="http://localhost/nepalLocation/admin/bootstrap-5.3.0-alpha2-dist/js/jquery-3.5.js"></script>
+    <?php
+    require_once "../admin/connection.php";
+    include "../include/footer.php";
+    ?>
+
     <script defer src="http://localhost/nepalLocation/admin/bootstrap-5.3.0-alpha2-dist/js/jquery.dataTables.min.js"></script>
     <script defer src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-    <script defer src="http://localhost/nepalLocation/admin/js/script.js"></script>
 </body>
 </html>

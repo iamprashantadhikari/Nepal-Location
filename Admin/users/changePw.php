@@ -16,6 +16,15 @@ $id = $_GET['id'];
     <div><?php include "../include/sidebar.php" ?></div>
     <div id="child-div" class="child-div child-div-full">
     <?php include "../include/header.php" ?>
+
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="javascript:history.back()">Users</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Change Pw</li>
+    </ol>
+    </nav>
+
     <div class="form-reg">
             <form action="updatePw.php?id=<?php echo $id ?>" method="POST">
                     <h3>Change Password</h3>

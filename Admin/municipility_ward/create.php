@@ -17,6 +17,14 @@
     $result_muni = mysqli_query($conn,$sql_muni);
     ?>
 
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="javascript:history.back()">Municipility Ward</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Create</li>
+    </ol>
+    </nav>
+
      <div class="form">
     <form action="action.php" method="POST">
 

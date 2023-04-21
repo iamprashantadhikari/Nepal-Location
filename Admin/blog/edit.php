@@ -18,6 +18,14 @@
      $row = mysqli_fetch_array($result);
     ?>
 
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="javascript:history.back()">Blog</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edit</li>
+    </ol>
+    </nav>
+
     <div class="container">
         <form action="update.php?id=<?php echo $row['id'];?>" method="post" enctype="multipart/form-data">
         <div class="form-group">
@@ -26,7 +34,8 @@
         </div>
         <div class="form-group">
             <label for="exampleFormControlFile1">File input</label>
-            <input type="file" class="form-control-file" name="image">
+            <input type="file" class="form-control-file" name="image" onchange="loadFile(event)">
+            <p><img id="output" width="100" /></p>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Description</label>

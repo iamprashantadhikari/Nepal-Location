@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,6 +44,7 @@
 					<li><a href="http://localhost/nepalLocation/admin/municipility_ward/index.php"><i class="fa fa-heart"></i> Muni Ward</a></li>
 
 					<!-- Dropdown-->
+					<?php if($_SESSION['role']=='admin'){ ?>
 					<li class="panel panel-default" id="dropdown">
 						<a data-toggle="collapse" href="#dropdown-lvl1">
 							<i class="fa fa-diamond"></i> Site Mgmt &#10095;
@@ -53,11 +57,13 @@
 									<li><a href="http://localhost/nepalLocation/admin/blog/index.php">Blog</a></li>
 									<li><a href="http://localhost/nepalLocation/admin/socialmedia/index.php">Social Media</a></li>
 									<li><a href="http://localhost/nepalLocation/admin/aboutus/index.php">About Us</a></li>
+									<li><a href="http://localhost/nepalLocation/admin/media/index.php">Media</a></li>
 
 								</ul>
 							</div>
 						</div>
 					</li>
+					<?php } ?>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</nav>  

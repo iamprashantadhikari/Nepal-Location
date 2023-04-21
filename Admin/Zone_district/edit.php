@@ -28,10 +28,18 @@ $result_district = mysqli_query($conn,$sql_district);
     <div id="child-div" class="child-div child-div-full">
     <?php include "../include/header.php" ?>
 
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="javascript:history.back()">Zone District</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edit</li>
+    </ol>
+    </nav>
+
     <div class="form">
         <form action="update_zone_district.php?id=<?php echo $row['id'];?>" method="POST">
-            <label class="label">Select Zone:</label>
-            <select name="zone_name" class="js-example-basic-single">
+            <label id="name">Select Zone:</label> <br>
+            <select name="zone_name" class="js-example-basic-single form-select">
                 <?php if(mysqli_num_rows($result_zone)>0){ ?>
                     <?php while($row_zone = mysqli_fetch_array($result_zone)){ ?>
 
@@ -41,8 +49,8 @@ $result_district = mysqli_query($conn,$sql_district);
                 <?php } ?>
             </select> <br> <br>
 
-            <label class="label">Select District:</label>
-            <select name="district_name" class="js-example-basic-single">
+            <label id="name">Select District:</label> <br>
+            <select name="district_name" class="js-example-basic-single form-select">
                 <?php if(mysqli_num_rows($result_district)>0){ ?>
                     <?php while($row_district = mysqli_fetch_array($result_district)){ ?>
 

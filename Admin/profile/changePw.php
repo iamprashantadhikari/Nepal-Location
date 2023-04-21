@@ -13,6 +13,14 @@
     <div id="child-div" class="child-div child-div-full">
     <?php include "../include/header.php" ?>
 
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="javascript:history.back()">Profile</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Change PW</li>
+    </ol>
+    </nav>
+
     <div class="form-reg">
         <form action="update_password.php" method="POST">
                 <h3>Change Password</h3>

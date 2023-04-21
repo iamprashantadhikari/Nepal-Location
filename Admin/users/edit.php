@@ -18,6 +18,15 @@
     $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($result);
     ?>
+
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="javascript:history.back()">Users</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edit</li>
+    </ol>
+    </nav>
+
     <div class="form-reg">
         <form action="update_user.php?id=<?php echo $row['id'];?>" method="post" enctype="multipart/form-data">
         <h3>Edit User Account</h3>

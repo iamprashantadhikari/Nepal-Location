@@ -14,11 +14,22 @@
     <?php
     include "../include/header.php";
     $you = $_SESSION['userid'];
-    $sql = "SELECT * FROM users WHERE NOT (id=$you)";
+    if($_SESSION['role']=="admin"){
+        $sql = "SELECT * FROM users WHERE NOT (id=$you)";
+    }else{
+        $sql = "SELECT * FROM users WHERE (id!=$you && role!='admin')";
+    }
     $result = mysqli_query($conn,$sql);
 
     $serialNo = 1;
     ?>
+
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Users</li>
+    </ol>
+    </nav>
 
 <?php if($_SESSION['role']=="admin"){ ?>
 <div class="nav">

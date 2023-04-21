@@ -23,6 +23,14 @@ $sql_muni = "SELECT * FROM municipility";
 $result_muni = mysqli_query($conn,$sql_muni);
     ?>
 
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="javascript:history.back()">Province Municipility</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edit</li>
+    </ol>
+    </nav>
+
 <div class="main-div">
     <div><?php include "../include/sidebar.php" ?></div>
     <div id="child-div" class="child-div child-div-full">
@@ -30,8 +38,8 @@ $result_muni = mysqli_query($conn,$sql_muni);
     
     <div class="form">
         <form action="update_province_municipility.php?id=<?php echo $row_prov_dist['id']; ?>" method="POST">
-            <label class="label">Select Province:</label>
-            <select name="province_name" class="js-example-basic-single">
+            <label id="name">Select Province:</label> <br>
+            <select name="province_name" class="js-example-basic-single form-select">
                 <?php if(mysqli_num_rows($result_prov)>0){ ?>
                     <?php while($row_prov=mysqli_fetch_array($result_prov)){ ?>
 
@@ -47,8 +55,8 @@ $result_muni = mysqli_query($conn,$sql_muni);
                <?php }?>
             </select> <br> <br>
 
-            <label class="label">Select District:</label>
-            <select name="district_name" class="js-example-basic-single">
+            <label id="name">Select District:</label> <br>
+            <select name="district_name" class="js-example-basic-single form-select">
                 <?php if(mysqli_num_rows($result_dist)>0){ ?>
                     <?php while($row_dist=mysqli_fetch_array($result_dist)){ ?>
 
@@ -63,8 +71,8 @@ $result_muni = mysqli_query($conn,$sql_muni);
                 <?php } ?>
             </select> <br> <br>
 
-            <label class="label">Select Municipility:</label>
-            <select name="municipility_name" class="js-example-basic-single">
+            <label id="name">Select Municipility:</label> <br>
+            <select name="municipility_name" class="js-example-basic-single form-select">
                 <?php if(mysqli_num_rows($result_muni)>0){ ?>
                     <?php while($row_muni=mysqli_fetch_array($result_muni)){ ?>
 

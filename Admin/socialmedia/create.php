@@ -12,6 +12,14 @@
     <div id="child-div" class="child-div child-div-full">
     <?php include "../include/header.php" ?>
 
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="javascript:history.back()">Social Media</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Create</li>
+    </ol>
+    </nav>
+
     <div class="container">
         <form action="action.php" method="post">
         <div class="form-group">
@@ -19,8 +27,8 @@
             <input type="text" class="form-control" name="title" placeholder="Enter Title">
         </div>
         <div class="form-group">
-            <label for="exampleFormControlFile1">Logo</label>
-            <input type="file" class="form-control-file" name="logo">
+            <label for="exampleFormControlFile1">Icon Class</label>
+            <input type="text" class="form-control" name="icon" placeholder="Enter Icon Class">
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput">Link</label>

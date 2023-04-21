@@ -15,7 +15,7 @@
     <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
-        <li class="breadcrumb-item"><a href="javascript:history.back()">Blog</a></li>
+        <li class="breadcrumb-item"><a href="javascript:history.back()">Media</a></li>
         <li class="breadcrumb-item active" aria-current="page">Create</li>
     </ol>
     </nav>
@@ -27,13 +27,13 @@
             <input type="text" class="form-control" name="title" placeholder="Enter Title">
         </div>
         <div class="form-group">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea class="form-control" name="description" rows="3"></textarea>
+        </div>
+        <div class="form-group">
             <label for="exampleFormControlFile1">File input</label>
             <input type="file" class="form-control-file" name="image" onchange="loadFile(event)"> 
             <p><img id="output" width="100" /></p>
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Description</label>
-            <textarea class="form-control" name="description" rows="3"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         </form>

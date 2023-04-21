@@ -25,12 +25,20 @@ $result_muni = mysqli_query($conn,$sql_muni);
     <div id="child-div" class="child-div child-div-full">
 <?php include "../include/header.php" ?>
 
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="javascript:history.back()">Province Municipility</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Create</li>
+    </ol>
+    </nav>
+
     <div class="form">
         <form action="action_province_municipility.php" method="POST">
 
-            <label for="" class="label">Select Province:</label>
+            <label for="" id="name">Select Province:</label> <br>
 
-            <select name="province_name" class="js-example-basic-single">
+            <select name="province_name" class="js-example-basic-single form-select">
 
                 <option value="">Select Province</option>
 
@@ -50,9 +58,9 @@ $result_muni = mysqli_query($conn,$sql_muni);
                 <?php } ?>
             </select> <br><br>
             
-            <label for="" class="label">Select District:</label>
+            <label for="" id="name">Select District:</label> <br>
 
-            <select name="district_name" class="js-example-basic-single">
+            <select name="district_name" class="js-example-basic-single form-select">
 
                <option value="">Select District</option>
 
@@ -72,9 +80,9 @@ $result_muni = mysqli_query($conn,$sql_muni);
                 <?php } ?>
             </select><br><br>
             
-            <label for="" class="label">Select Municipility:</label>
+            <label for="" id="name">Select Municipility:</label> <br>
 
-            <select name="municipility_name" class="js-example-basic-single">
+            <select name="municipility_name" class="js-example-basic-single form-select">
 
                 <option value="">Select Municipility</option>
 

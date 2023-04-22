@@ -20,6 +20,13 @@ $row = mysqli_fetch_array($result);
 
 ?>
 
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="javascript:history.back()">Zone</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edit Request</li>
+    </ol>
+    </nav>
     
 <div class="form">
     <form action="update_zone_request.php?id=<?php echo $row['id']; ?>" method="POST" >

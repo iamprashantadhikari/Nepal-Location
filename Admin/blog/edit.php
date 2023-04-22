@@ -35,7 +35,7 @@
         <div class="form-group">
             <label for="exampleFormControlFile1">File input</label>
             <input type="file" class="form-control-file" name="image" onchange="loadFile(event)">
-            <p><img id="output" width="100" /></p>
+            <p><img id="output" src="../uploaded_images/<?php echo $row['image']; ?>" width="100" /></p>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Description</label>

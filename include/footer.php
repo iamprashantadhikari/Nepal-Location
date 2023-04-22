@@ -39,18 +39,18 @@
               <li>
                 <a href="http://localhost/nepalLocation/blog.php" class="text-white">Blog</a>
               </li>
+              <li>
+                <a href="http://localhost/nepalLocation/faq.php" class="text-white">FAQ</a>
+              </li>
             </ul>
           </div>
           <!--Grid column-->
 
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-0">Support</h5>
+            <h5 class="text-uppercase mb-3">Support</h5>
 
             <ul class="list-unstyled">
-              <li>
-                <a href="faq.php" class="text-white">FAQ</a>
-              </li>
               <li>
                 <p><i class="fa-solid fa-location-dot"></i> <?php echo $rowAbout['address'] ?></p>
               </li>

@@ -14,7 +14,7 @@
       <h1>FAQ</h1>
     </div>
 
-    <div class="container py-3">
+    <div class="container pb-3">
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingOne">

@@ -117,8 +117,6 @@ $serialNo = 1;
     <div class="data-empty">
         <?php if($num==0) echo "Data not available" ?>
     </div>
-</body>
-</html>
 <?php include "../include/footer.php";
 unset($_SESSION['reqSuccess']);
 unset($_SESSION['pending']);

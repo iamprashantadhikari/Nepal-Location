@@ -27,23 +27,19 @@
                 <a class="nav-link active" href="http://localhost/nepalLocation/index.php#aboutUs">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="blog.php">Blog</a>
+                <a class="nav-link active" href="http://localhost/nepalLocation/blog.php">Blog</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   View Data
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Province</a></li>
-                  <li><a class="dropdown-item" href="#">District</a></li>
-                  <li><a class="dropdown-item" href="#">Municipility</a></li>
+                  <li><a class="dropdown-item" href="http://localhost/nepalLocation/province.php">Province</a></li>
+                  <li><a class="dropdown-item" href="http://localhost/nepalLocation/district.php">District</a></li>
+                  <li><a class="dropdown-item" href="http://localhost/nepalLocation/municipility.php">Municipility</a></li>
                 </ul>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
     </nav>

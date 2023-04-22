@@ -33,7 +33,7 @@
                 <div>
                   <h1 class="text-light"><?php echo $rowMedia['title'];?></h1>
                   <p class="text-light"><?php echo $rowMedia['description'];?></p>
-</div>
+                </div>
               </div>
               <div class="col-3">
                   <img src="admin/uploaded_images/<?php echo $rowMedia['img'];?>" style="width: 20vw;" alt="">

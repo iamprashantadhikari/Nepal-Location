@@ -15,7 +15,7 @@ include "include/header.php";
     <div class="d-flex justify-content-center table-size">
       <h1>Our Blog</h1>
     </div>
-    <div class="main-card d-flex justify-content-between p-4 flex-wrap">
+    <div class="main-card d-flex justify-content-between px-4 flex-wrap">
 
     <?php
     $sqlBlog = "SELECT * FROM blog WHERE status='active'";

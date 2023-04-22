@@ -39,7 +39,7 @@
         <div class="form-group">
             <label for="exampleFormControlFile1">File input</label>
             <input type="file" class="form-control-file" name="image" onchange="loadFile(event)">
-            <p><img id="output" width="100" /></p>
+            <p><img id="output" src="../uploaded_images/<?php echo $row['img']; ?>" width="100" /></p>
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
         </form>

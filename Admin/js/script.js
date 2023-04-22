@@ -40,9 +40,7 @@ $(document).ready(function() {
     });
   }());
 
-function open_sidebar(){
 
-}
 $(document).ready(function(){
     $('#bar_opener').on('click',function(){
         $('#msb').toggleClass('msbActive');

@@ -10,7 +10,7 @@ $resultProv = mysqli_query($conn,$sqlProv);
 $rowProv = mysqli_fetch_array($resultProv);
 
 $dId = $_GET['dId'];
-$sqlDist = "SELECT * FROM district WHERE id='$id'";
+$sqlDist = "SELECT * FROM district WHERE id='$dId'";
 $resultDist = mysqli_query($conn,$sqlDist);
 $rowDist = mysqli_fetch_array($resultDist);
 
